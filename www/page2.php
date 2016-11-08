@@ -23,7 +23,6 @@ $user = [
 	'elena' => '111',
 	'nicoleta' => '0000',
 ];
-//var_dump($_POST);
 if(isset($_POST['login']) && isset($_POST['pass']) ){
 	$login = $_POST['login'];
 	$pass = $_POST['pass'];
@@ -38,9 +37,7 @@ if(isset($_SESSION['login']) && isset($_SESSION['pass']) ){
 	$pass = $_SESSION['pass'];
 }
 
-//var_dump($user["$login"]);
-//var_dump($login);
-//var_dump($pass);
+
 $eLogat = isset($login) && isset($pass) ; //!!!
 $eLogat = $eLogat && ($pass === $user["$login"]);
 if($eLogat):
